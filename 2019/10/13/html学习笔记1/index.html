@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-atom.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="html+css3​        经过一个月的专项练习，内容包括网站切图，表格表单、html5新特性，ie浏览器的兼容、css3新特性，2d、3d动画，手机端布局（弹性布局），对html+css3的理解和应用更上一个高度。 ​          下面简单介绍一下重要的知识点： 表格：   12345678```&amp;lt; table&amp;gt;	&amp;lt;tr&amp;gt;行		&amp;lt; td&amp;gt;列&amp;lt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html+css3学习笔记1 --h5新特性">
+<meta property="og:url" content="http://yoursite.com/2019/10/13/html学习笔记1/index.html">
+<meta property="og:site_name" content="顶瓜瓜">
+<meta property="og:description" content="html+css3​        经过一个月的专项练习，内容包括网站切图，表格表单、html5新特性，ie浏览器的兼容、css3新特性，2d、3d动画，手机端布局（弹性布局），对html+css3的理解和应用更上一个高度。 ​          下面简单介绍一下重要的知识点： 表格：   12345678```&amp;lt; table&amp;gt;	&amp;lt;tr&amp;gt;行		&amp;lt; td&amp;gt;列&amp;lt">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-13T05:01:04.564Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html+css3学习笔记1 --h5新特性">
+<meta name="twitter:description" content="html+css3​        经过一个月的专项练习，内容包括网站切图，表格表单、html5新特性，ie浏览器的兼容、css3新特性，2d、3d动画，手机端布局（弹性布局），对html+css3的理解和应用更上一个高度。 ​          下面简单介绍一下重要的知识点： 表格：   12345678```&amp;lt; table&amp;gt;	&amp;lt;tr&amp;gt;行		&amp;lt; td&amp;gt;列&amp;lt">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/13/html学习笔记1/">
+
+
+
+
+
+  <title>html+css3学习笔记1 --h5新特性 | 顶瓜瓜</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">顶瓜瓜</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/13/html学习笔记1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lxf">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="顶瓜瓜">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">html+css3学习笔记1 --h5新特性</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-13T12:18:08+08:00">
+                2019-10-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="html-css3"><a href="#html-css3" class="headerlink" title="html+css3"></a>html+css3</h1><p>​        经过一个月的专项练习，内容包括网站切图，表格表单、html5新特性，ie浏览器的兼容、css3新特性，2d、3d动画，手机端布局（弹性布局），对html+css3的理解和应用更上一个高度。</p>
+<p>​        </p>
+<hr>
+<h3 id="下面简单介绍一下重要的知识点："><a href="#下面简单介绍一下重要的知识点：" class="headerlink" title="下面简单介绍一下重要的知识点："></a>下面简单介绍一下重要的知识点：</h3><blockquote>
+<p>表格： </p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"><span class="tag">&lt; <span class="attr">table</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span>行</span><br><span class="line">		<span class="tag">&lt; <span class="attr">td</span>&gt;</span>列<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt; <span class="attr">td</span>&gt;</span>列<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt; <span class="attr">table</span>&gt;</span></span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>属性<ul>
+<li>cellpadding     盒子与内容的间距</li>
+<li>colspan           合并列 （横向扩展）</li>
+<li>rowspan         合并行（竖直向下）</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>表单 form：</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">name</span>=<span class="string">" 表单名称"</span>  <span class="attr">method</span>=<span class="string">"post/get"</span>  <span class="attr">action</span>=<span class="string">"#地址"</span> &gt;</span></span><br><span class="line">文本框</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span>=<span class="string">"默认值"</span> <span class="attr">placeholder</span>=<span class="string">“输入框内容/</span>&gt;</span></span><br><span class="line">密码框</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> /&gt;</span>	</span><br><span class="line">提交按钮</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"按钮内容"</span> /&gt;</span>	</span><br><span class="line">重置按钮</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"reset"</span> <span class="attr">value</span>=<span class="string">"按钮内容"</span> /&gt;</span>			</span><br><span class="line">单选框/单选按钮</span><br><span class="line">男<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"ral"</span>/&gt;</span>女<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"ral"</span> /&gt;</span></span><br><span class="line"> <span class="comment">&lt;!--单选按钮里的name属性必须写，同一组单选按钮的name属性值必须一样。--&gt;</span></span><br><span class="line">复选框    </span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"like"</span> /&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"like"</span>  <span class="attr">disabled</span>=<span class="string">"disabled"</span> /&gt;</span> (disabled="disabled" :禁用)(checked="checked" :默认选中)</span><br><span class="line">下拉菜单   </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">option</span>&gt;</span>菜单内容<span class="tag">&lt;/<span class="name">option</span>&gt;</span><span class="tag">&lt;/<span class="name">select</span>&gt;</span>				</span><br><span class="line">多行文本框（文本域）    </span><br><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"textareal"</span> <span class="attr">cols</span>=<span class="string">"字符宽度"</span> <span class="attr">rows</span>=<span class="string">"行数"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span>  禁止拖动 resize: none;</span><br><span class="line">按钮    </span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"'"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">“按钮内容”</span> /&gt;</span>					</span><br><span class="line"><span class="comment">&lt;!--（他和submit的区别是 ，submit是提交按钮 起到提交信息的作用，button只起到跳转的作用，不进行提交。）占位placeholder=“输入框内容” --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 表单的高级属性</p>
+</blockquote>
+<ul>
+<li><strong>fieldset</strong> 表单字段集 作用：给表单控件分组</li>
+<li><strong>legend表单标题</strong></li>
+<li><strong>label提示信息标签</strong><br>写法：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"绑定控件id名"</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"名"</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>上传文件框</strong>：<br>&LT;input type=&QUOT;file&QUOT; multiple=&QUOT;multiple&QUOT; /&GT;</p>
+</li>
+<li><p><strong>图像域</strong>：</p>
+</li>
+</ul>
+<p>&LT;input type=&QUOT;image&QUOT; src=&QUOT;&QUOT; width=&QUOT;&QUOT; height=&QUOT;&QUOT;  alt=&QUOT;图片&QUOT; /&GT;</p>
+<h2 id="html5新特性"><a href="#html5新特性" class="headerlink" title="html5新特性"></a>html5新特性</h2><p><strong>兼容到ie9</strong></p>
+<p>增加了新特性：语义特性，本地存储特性，设备兼容特性，连接特性，网页多媒体特性，三维、图形及特效特性，性能与集成特性，CSS3特性。</p>
+<p>1.<strong>header</strong><br>     定义文档的页眉，通常是一些引导和导航信息<br>     注意：header不能被header、footer嵌套，header不局限于写在网页头部，也可以写在网页内容里面</p>
+<p>2.<strong>nav</strong><br>    导航标签<br>3.<strong>main</strong><br>主要内容标签不能出现一个以上的&LT;main&gt; 元素。&LT;main&gt; 元素不能是以下元素的后代：&LT;article&gt;、&LT;aside&gt;、&LT;footer&gt;、&LT;header&gt; 或&LT;nav&gt;</p>
+<p> 4.<strong>article</strong><br>    比section具有更明确的语义，它代表一个独立的、完整的相关内容块，可独立于页面其它内容使用<br>    注意：article可以嵌套article</p>
+<p>5.<strong>section</strong><br>     标签定义了文档的章节，本意是区块<br> 6.<strong>aside</strong><br>     用来装载非正文的内容，标签被删除不影响页面信息传递，例如：广告、侧边栏 </p>
+<p>7.<strong>footer</strong><br>     眉脚一般会包含作者姓名、文档版权信息、使用条款链接、联系信息等. 也可以写在网页内容里面<br> 8.<strong>hgroup</strong><br>     用于对网页或区段（section）的标题进行组合 </p>
+<p>9.<strong>figure、figcaption</strong> </p>
+<ul>
+<li><p>&LT;figure&gt;用于对元素进行组合。一般用于图片，文字组合。</p>
+</li>
+<li><p>&LT;figcaption&gt;是 figure的子元素，用于对figure的内容进行说明</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">figure</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../images/mn.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">figcaption</span>&gt;</span>超人气女团<span class="tag">&lt;/<span class="name">figcaption</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="10">
+<li><p>time标签  datetime属性</p>
+ <p>今天<time>星期三</time>，好开心，还有三天就<time datetime="2019-7-28">放假</time> 了</p> 
+</li>
+<li><p>datalist 输入功能下拉列表</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">list</span>=<span class="string">"cn-list"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"cn-list"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"李宇春"</span>&gt;</span>李宇春<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"周笔畅"</span>&gt;</span>周笔畅<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"张靓颖"</span>&gt;</span>张靓颖<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="12">
+<li><p>details 用于描述文档或文档某个部分的细节  open属性 </p>
+<details open>
+    <summary>静夜思</summary>
+    <p>锄禾日当午，旱地和下土</p>
+    <p>夜来风雨声，花落知多少</p>
+</details>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span> <span class="attr">open</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">summary</span>&gt;</span>静夜思<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>锄禾日当午，旱地和下土<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>夜来风雨声，花落知多少<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mark 定义带有记号的文本</p>
+<p>
+    报告显示，2019年中国十大拥堵城市分别是<mark style="background:#0f0;">重庆市、哈尔滨市、北京市、长春市、呼和浩特市、大连市、济南市、沈阳市、兰州市、西宁市</mark>。其中，重庆市高峰行程延时指数为1.964，排名十大堵城之首
+</p>
+
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    报告显示，2019年中国十大拥堵城市分别是<span class="tag">&lt;<span class="name">mark</span></span></span><br><span class="line"><span class="tag">        <span class="attr">style</span>=<span class="string">"background:#0f0;"</span>&gt;</span>重庆市、哈尔滨市、北京市、长春市、呼和浩特市、大连市、济南市、沈阳市、兰州市、西宁市<span class="tag">&lt;/<span class="name">mark</span>&gt;</span>。其中，重庆市高峰行程延时指数为1.964，排名十大堵城之首</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>14.progress 进度条 max最大值  value当前值<br>    <progress max="100" value="50"></progress></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">progress</span> <span class="attr">max</span>=<span class="string">"100"</span> <span class="attr">value</span>=<span class="string">"50"</span>&gt;</span><span class="tag">&lt;/<span class="name">progress</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>15.meter 度量尺<br>    <meter max="100" value="50"></meter></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meter</span> <span class="attr">max</span>=<span class="string">"100"</span> <span class="attr">value</span>=<span class="string">"50"</span>&gt;</span><span class="tag">&lt;/<span class="name">meter</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>16.ruby注释标签 配合rt<br>    <ruby>嫑<rt>biáo</rt></ruby></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ruby</span>&gt;</span>嫑<span class="tag">&lt;<span class="name">rt</span>&gt;</span>biáo<span class="tag">&lt;/<span class="name">rt</span>&gt;</span><span class="tag">&lt;/<span class="name">ruby</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>17.output</p>
+<form oninput="res.value=no1.value-no2.value">
+        <!-- 加号在js里是字符串拼接 -->
+        <input type="text" name="no1" placeholder="请输入数字1">
+        <input type="text" name="no2" placeholder="请输入数字2">
+        <output name="res"></output>
+</form>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">oninput</span>=<span class="string">"res.value=no1.value-no2.value"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 加号在js里是字符串拼接 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"no1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"no2"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">output</span> <span class="attr">name</span>=<span class="string">"res"</span>&gt;</span><span class="tag">&lt;/<span class="name">output</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>18.语义化标签兼容IE8-6
+&lt;!-- 通过&lt;script src=&quot;路径&quot;&gt;&lt;/script&gt;引入外部插件 --&gt;</code></pre><p> 视频的插入   </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">"movie.ogg"</span>&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">Controls</span> &gt;</span><span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"movie.ogg"</span> <span class="attr">type</span>=<span class="string">"video/ogg"</span> &gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br><span class="line">(type必加属性) 支持的视频格式ogg、webM、MP4</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/07/hexo搭建/" rel="next" title="hexo的搭建">
+                <i class="fa fa-chevron-left"></i> hexo的搭建
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/13/html学习笔记2/" rel="prev" title="html+css3学习笔记2 --ie兼容">
+                html+css3学习笔记2 --ie兼容 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/timg.jpg" alt="lxf">
+            
+              <p class="site-author-name" itemprop="name">lxf</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lxf520" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#html-css3"><span class="nav-number">1.</span> <span class="nav-text">html+css3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下面简单介绍一下重要的知识点："><span class="nav-number">1.0.1.</span> <span class="nav-text">下面简单介绍一下重要的知识点：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html5新特性"><span class="nav-number">1.1.</span> <span class="nav-text">html5新特性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lxf</span>
+
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+-->
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
