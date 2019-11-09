@@ -86,13 +86,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="顶瓜瓜">
-<meta property="og:url" content="http://yoursite.com/archives/2019/10/index.html">
+<meta name="description" content="关于new运算符红宝书上解释：（1）创建一个新对象 （2）将构造函数的作用域赋给新对象 （3）执行构造函数中的代码 （4）返回新对象  当我们用new运算符new一个构造函数产生一个实例时，比如说： var obj= new Foo( ) 时，其背后的步骤是这样的： 12345678910111213// 创建了一个空对象 obj，并将这个空对象的__proto__成员指向 Foo 函数对象 pr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="new运算符工作原理">
+<meta property="og:url" content="http://yoursite.com/2019/11/09/new运算符工作原理/index.html">
 <meta property="og:site_name" content="顶瓜瓜">
+<meta property="og:description" content="关于new运算符红宝书上解释：（1）创建一个新对象 （2）将构造函数的作用域赋给新对象 （3）执行构造函数中的代码 （4）返回新对象  当我们用new运算符new一个构造函数产生一个实例时，比如说： var obj= new Foo( ) 时，其背后的步骤是这样的： 12345678910111213// 创建了一个空对象 obj，并将这个空对象的__proto__成员指向 Foo 函数对象 pr">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-09T04:38:58.298Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="顶瓜瓜">
+<meta name="twitter:title" content="new运算符工作原理">
+<meta name="twitter:description" content="关于new运算符红宝书上解释：（1）创建一个新对象 （2）将构造函数的作用域赋给新对象 （3）执行构造函数中的代码 （4）返回新对象  当我们用new运算符new一个构造函数产生一个实例时，比如说： var obj= new Foo( ) 时，其背后的步骤是这样的： 12345678910111213// 创建了一个空对象 obj，并将这个空对象的__proto__成员指向 Foo 函数对象 pr">
 
 
 
@@ -122,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2019/10/">
+  <link rel="canonical" href="http://yoursite.com/2019/11/09/new运算符工作原理/">
 
 
 
 
 
-  <title>归档 | 顶瓜瓜</title>
+  <title>new运算符工作原理 | 顶瓜瓜</title>
   
 
 
@@ -147,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -221,247 +225,156 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/09/new运算符工作原理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lxf">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="顶瓜瓜">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">new运算符工作原理</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-09T12:39:05+08:00">
+                2019-11-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 9 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/13/html学习笔记3/" itemprop="url">
-              
-                <span itemprop="name">css3选择器</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-13T13:30:50+08:00" content="2019-10-13">
-          10-13
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/13/html学习笔记2/" itemprop="url">
-              
-                <span itemprop="name">html+css3学习笔记2 --ie兼容</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-13T13:22:02+08:00" content="2019-10-13">
-          10-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <h2 id="关于new运算符"><a href="#关于new运算符" class="headerlink" title="关于new运算符"></a>关于new运算符</h2><h3 id="红宝书上解释："><a href="#红宝书上解释：" class="headerlink" title="红宝书上解释："></a>红宝书上解释：</h3><p>（1）创建一个新对象</p>
+<p>（2）将构造函数的作用域赋给新对象</p>
+<p>（3）执行构造函数中的代码</p>
+<p>（4）返回新对象</p>
+<hr>
+<p>当我们用new运算符new一个构造函数产生一个实例时，比如说： var obj= new Foo( ) 时，其背后的步骤是这样的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建了一个空对象 obj，并将这个空对象的__proto__成员指向 Foo 函数对象 prototype 成员对象</span></span><br><span class="line"><span class="keyword">var</span> obj  = &#123;&#125;;</span><br><span class="line">obj.__proto__ = Foo.prototype;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用Foo函数来初始化obj</span></span><br><span class="line">Foo.call(obj);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断实例类型是否为对象，是则返回实例，否则返回构造函数</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> obj === <span class="string">'object'</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> Foo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/13/html学习笔记1/" itemprop="url">
-              
-                <span itemprop="name">html+css3学习笔记1 --h5新特性</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-13T12:18:08+08:00" content="2019-10-13">
-          10-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p>也就是说，函数内部发生了以下变化：</p>
+<p>（1）创建一个新对象，并继承构造函数 Foo 的原型对象 Foo.prototype</p>
+<p>（2）构造函数 Foo 被执行，执行时传入相应的参数，并将 this 指定为新的实例</p>
+<p>（3）判断实例是否为对象，是则返回实例，否则返回构造函数</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/07/hexo搭建/" itemprop="url">
-              
-                <span itemprop="name">hexo的搭建</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-07T22:04:19+08:00" content="2019-10-07">
-          10-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/07/逍遥游/" itemprop="url">
-              
-                <span itemprop="name">逍遥游</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-07T19:48:40+08:00" content="2019-10-07">
-          10-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/07/TypeScript简单说明/" itemprop="url">
-              
-                <span itemprop="name">TypeScript语言简单说明</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-07T19:48:40+08:00" content="2019-10-07">
-          10-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/09/关于this指向/" rel="next" title="关于this指向">
+                <i class="fa fa-chevron-left"></i> 关于this指向
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/09/计算机网络基础知识/" rel="prev" title="计算机网络基础知识">
+                计算机网络基础知识 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -469,6 +382,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -489,8 +406,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -544,6 +470,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于new运算符"><span class="nav-number">1.</span> <span class="nav-text">关于new运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#红宝书上解释："><span class="nav-number">1.1.</span> <span class="nav-text">红宝书上解释：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -691,6 +633,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
